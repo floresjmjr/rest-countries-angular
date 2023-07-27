@@ -1,0 +1,15 @@
+.title-page-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 3px solid lightgray;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  width: 400px;
+}
+
+.title-page-container h2 {
+  margin-top: 5px;
+  margin-bottom: 5px;
+  font-weight: 500;
+}

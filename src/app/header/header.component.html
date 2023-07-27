@@ -1,0 +1,28 @@
+<!-- <form class="search-form" (ngSubmit)="onSubmitHandler(f)" #f="ngForm">
+  <input
+    class="country-autocomplete"
+    name="country"
+    ngModel
+    required
+  />
+  <button [disabled]="!f.valid" type="submit">Submit</button>
+</form> -->
+<form class="search-form" (ngSubmit)="onSubmitHandler()">
+    <input matInput
+      type="text"
+      placeholder="Search box"
+      [matAutocomplete]="auto"
+      class="country-autocomplete"
+      [formControl]="countryControl"
+      required
+    />
+    <mat-autocomplete #auto="matAutocomplete">
+      <mat-option
+        *ngFor="let country of filteredCountries | async"
+        [value]="country"
+      >
+        {{ country }}
+      </mat-option>
+    </mat-autocomplete>
+    <button [disabled]="!countryControl.valid" type="submit">Submit</button>
+</form>

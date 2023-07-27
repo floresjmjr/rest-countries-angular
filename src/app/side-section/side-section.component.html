@@ -1,0 +1,20 @@
+<div class="flags" *ngIf="flag.image; else placeholder">
+  <img class='flag-border' [src]="flag.image" [alt]="flag.desc" />
+  <p>Country Flag</p>
+  <img [src]="coatOfArms" alt="'coat of arms'" />
+  <p>Coat of Arms</p>
+</div>
+<ng-template #placeholder>
+  <div class="flags">
+    <img
+      src="https://geekflare.com/wp-content/uploads/2023/03/img-placeholder.png"
+      alt="flag placeholder"
+    />
+    <p>Country Flag</p>
+    <img
+      src="https://geekflare.com/wp-content/uploads/2023/03/img-placeholder.png"
+      alt="coat of arms placeholder"
+    />
+    <p>Coat of Arms</p>
+  </div>
+</ng-template>

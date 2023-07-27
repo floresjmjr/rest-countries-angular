@@ -1,0 +1,21 @@
+<div class="body">
+  <div class="body-container">
+    <app-page-title class="title-page" />
+    <app-header
+      (retrieveCountry)="lookUpCountryHandler($event)"
+      class="search-header"
+    />
+    <main class="sections">
+      <app-main-section
+        [countryInfo]="countryInfo"
+        class="main-section"
+        [errorMessage]="handledError"
+      />
+      <app-side-section
+        [flag]="flag"
+        [coatOfArms]="coatOfArms"
+        class="side-section"
+      />
+    </main>
+  </div>
+</div>

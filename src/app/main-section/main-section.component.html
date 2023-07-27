@@ -1,0 +1,38 @@
+<div class="main-section-container">
+  <div
+    class="main-section-content"
+    *ngIf="countryInfo.officialName; else displayErrorMessage"
+  >
+    <h2 class="main-section-title">{{ countryInfo.commonName }}</h2>
+    <dl class="country-details">
+      <dt>Common Name:</dt>
+      <dd>{{ countryInfo.commonName }}</dd>
+      <dt>Official Name:</dt>
+      <dd>{{ countryInfo.officialName }}</dd>
+      <dt>Currencies:</dt>
+      <dd>
+        <ul>
+          <li *ngFor="let currency of countryInfo.currencies | keyvalue">
+            {{ currency.value["name"] }} ( <u>symbol:</u>
+            {{ currency.value["symbol"] }} | <u>code:</u> {{ currency.key }} )
+          </li>
+        </ul>
+      </dd>
+      <dt>Languages:</dt>
+      <dd>
+        <ul>
+          <li *ngFor="let language of countryInfo.languages | keyvalue">
+            {{ language.value }}
+          </li>
+        </ul>
+      </dd>
+      <dt>Capital City:</dt>
+      <dd>{{ countryInfo.capitalCity }}</dd>
+      <dt>Population:</dt>
+      <dd>{{ countryInfo.population }}</dd>
+    </dl>
+  </div>
+  <ng-template #displayErrorMessage>
+    <div>{{ errorMessage }}</div>
+  </ng-template>
+</div>
