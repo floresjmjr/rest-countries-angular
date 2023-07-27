@@ -3,6 +3,8 @@
 - A website that displays information about a country.  
 - The website contains two sections, the country information panel and the flag and coat of arms panel.  
 - The country information comes from https://restcountries.com/
+- Currently deployed at Netlify (https://main--peaceful-gumption-e4da71.netlify.app/)
+- The React equivalent of this app can be found in this repo (https://github.com/floresjmjr/rest-countries)
 
 ### Country Information Panel
 - Common Name
@@ -26,4 +28,4 @@
 ### `npm start`
 
 Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:4200) to view it in your browser.
+Open [http://localhost:4200](http://localhost:4200) to view it in your browser.
